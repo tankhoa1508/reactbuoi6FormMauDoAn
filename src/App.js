@@ -4,10 +4,12 @@ import NotFound from "./components/notFound/NotFound";
 import Product from "./pages/product/Product";
 import Register from "./pages/register/Register";
 import ProductDetail from "./pages/productDetail/ProductDetail";
+import { AppProvider } from "./AppContext";
 
 function App() {
   return (
     <div>
+      <AppProvider>
           <Router>
                 
                 <Routes>
@@ -18,6 +20,7 @@ function App() {
                     <Route path="/*" element={<NotFound />}></Route>
                 </Routes>
             </Router>
+      </AppProvider>
     </div>
   );
 }
